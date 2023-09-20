@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @projectName: shiro_study
  * @package: com.hwc.shiro_study.controller
@@ -35,7 +37,12 @@ public class UserController {
     }
 
 
+    @ApiOperation(value = "获取用户列表", tags = "信息查询")
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public List<UserDto> listUser(){
 
+        return userService.list();
+    }
 
 
 
