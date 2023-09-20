@@ -1,0 +1,33 @@
+swagger:
+  enable: true
+
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 1
+    pathmatch:
+      # 作用？ 不添加报空指针异常
+      matching-strategy: ant_path_matcher
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shiro_study
+    username: root
+    password: 123456
+
+mybatis-plus:
+
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+
+
+
+
+
