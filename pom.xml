@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hwc</groupId>
-    <artifactId>shiro_study</artifactId>
+    <artifactId>ShiroDemo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>shiro_study</name>
     <description>shiro_study</description>
