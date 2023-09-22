@@ -17,7 +17,7 @@ import java.util.List;
  * @package: com.hwc.shiro_study.controller
  * @className: UserController
  * @author: huangweichun
- * @description: TODO
+ * @description: 用户信息处理类
  * @date: 2023/9/20 20:59
  * @version: 1.0
  */
@@ -32,7 +32,10 @@ public class UserController {
 
     @ApiOperation(value = "查看用户信息", tags = "信息查询")
     @RequestMapping(value = "/info", method = RequestMethod.GET)
-    public UserDto infoUser(@RequestParam(value = "userName") String userId) {
+    public UserDto infoUser(@RequestParam(value = "userName") String userId
+                            HttpServeltRequest reqeust,
+                            HttpServletResponse response) {
+
         return userService.getById(userId);
     }
 
