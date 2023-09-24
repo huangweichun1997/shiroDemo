@@ -5,11 +5,11 @@ import com.hwc.shiro_study.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.xml.transform.Source;
 import java.util.List;
 
 /**
@@ -32,11 +32,17 @@ public class UserController {
 
     @ApiOperation(value = "查看用户信息", tags = "信息查询")
     @RequestMapping(value = "/info", method = RequestMethod.GET)
-    public UserDto infoUser(@RequestParam(value = "userName") String userId
-                            HttpServeltRequest reqeust,
+    public UserDto infoUser(@RequestParam(value = "userName") String userId,
+                            HttpServletRequest request,
                             HttpServletResponse response) {
 
-        return userService.getById(userId);
+        String token = request.getHeader("X-Token");
+        String token1 = request.getHeader("token");
+
+        System.out.println(token);
+        System.out.println(token1);
+//        return userService.getById(userId);
+        return null;
     }
 
 
