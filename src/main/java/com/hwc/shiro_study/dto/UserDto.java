@@ -30,6 +30,10 @@ public class UserDto {
 
     private String userPwd;
 
+
+    private String salt;
+
+
     @TableLogic
     private Integer delted;
 

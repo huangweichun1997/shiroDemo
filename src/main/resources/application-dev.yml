@@ -28,6 +28,11 @@ mybatis:
   mapper-locations: classpath:/mapper/*.xml
 
 
+# 允许匿名访问的
+shiroAnnoUrl: /login/**;/bower_components/**;/modules/**;/dist/**;/plugins/**;
+
+
+
 
 
 
